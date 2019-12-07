@@ -18,6 +18,6 @@ public class Bouton extends JButton {
     g2d.setPaint(gp);
     g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
     g2d.setColor(Color.black);
-    g2d.drawString(this.name, this.getWidth() / 2 - (this.getWidth()/ 2 /4), (this.getHeight() / 2) + 5);
+    g2d.drawString(this.name, this.getWidth()/2-(this.getWidth()/8), (this.getHeight()/2)+5);
   }        
 }

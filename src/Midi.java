@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 import javax.sound.midi.InvalidMidiDataException;
@@ -27,7 +28,12 @@ public class Midi{
 			String nomMusique = entree.nextLine();
 			
 			Sequence sequence = MidiSystem.getSequence(new File("bin/" + nomMusique + ".mid")); // Create sequence, the File must contain MIDI file data.
-            
+			FileInputStream fis = new FileInputStream("bin/" + nomMusique + ".txt");
+			Scanner sc = new Scanner(fis); 
+			while(sc.hasNextLine()){  
+				System.out.println(sc.nextLine()); 
+			}  
+				sc.close(); 
 			sequencer.setSequence(sequence); // load it into sequencer
 			
 			//sequencer.setTempoFactor(2f); // change midi speed

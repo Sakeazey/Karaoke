@@ -3,6 +3,10 @@ import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
 import javax.swing.JLabel;
 
 public class Fenetre extends JFrame{
@@ -13,17 +17,24 @@ public class Fenetre extends JFrame{
 		Bouton bouton1 = new Bouton ("LANCER LA MUSIQUE SELECTIONNEE");
 		JPanel panb1 = new JPanel();
 		panb1.setLayout(new BorderLayout());
-		Bouton bouton2 = new Bouton ("ARRETER LA MUSIQUE");
+		Bouton bouton2 = new Bouton ("              ARRETER LA MUSIQUE");
 		JPanel panb2 = new JPanel();
 		panb2.setLayout(new BorderLayout());
 
-		
 		JPanel pan = new JPanel();
 		
+		JPanel songList = new JPanel();
+		songList.setLayout(new BorderLayout());
+		songList.setOpaque(false);
+		JLabel songNames = new JLabel("<html><body>La liste des musiques disponibles est :<br />- Viva_La_Vida<br />- Creep<br />- Lovely</body></html>");
+		songNames.setForeground(Color.red);
+		songNames.setHorizontalAlignment(JLabel.CENTER);
+		songNames.setVerticalAlignment(JLabel.CENTER);
+		Font songFont = new Font("Arial", Font.ITALIC + Font.BOLD, 26);
+		songNames.setFont(songFont);
+		
 		JPanel lay = new JPanel();
-		lay.setLayout(new BoxLayout(lay, BoxLayout.Y_AXIS));
-
-		JLabel label = new JLabel("Le JLabel");
+		lay.setLayout(new BoxLayout(lay, BoxLayout.Y_AXIS));		
 		
 		
 	    this.setTitle("KARAOKE FUN !"); //Définit un titre
@@ -55,8 +66,9 @@ public class Fenetre extends JFrame{
 	   	panb2.add(bouton2);
 	    lay.add(panb1);
 	    lay.add(panb2);
-
+	    songList.add(songNames);
 	    
+	    this.add(songList, BorderLayout.CENTER);
 	    this.add(lay, BorderLayout.SOUTH);
 
 	    this.setVisible(true);
