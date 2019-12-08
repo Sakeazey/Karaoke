@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Font;
 
 import javax.swing.JLabel;
@@ -20,8 +19,6 @@ public class Fenetre extends JFrame{
 		Bouton bouton2 = new Bouton ("              ARRETER LA MUSIQUE");
 		JPanel panb2 = new JPanel();
 		panb2.setLayout(new BorderLayout());
-
-		JPanel pan = new JPanel();
 		
 		JPanel songList = new JPanel();
 		songList.setLayout(new BorderLayout());
