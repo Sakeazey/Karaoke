@@ -33,5 +33,4 @@ public class Lyric {
 	public void setLyric(String lyric) {
 		this.lyric = lyric;
 	}
-	
 }

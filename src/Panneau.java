@@ -5,7 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D; 
 import javax.swing.JPanel;
 
-
+// Création du fond de la fenêtre
+@SuppressWarnings("serial")
 public class Panneau extends JPanel { 
   public void paintComponent(Graphics g){
 	  
@@ -35,7 +36,6 @@ public class Panneau extends JPanel {
 	    g.setFont(font);
 	    g.setColor(Color.white);          
 	    g.drawString("BIENVENUE A KARAOKE FUN !", 20, 50);   
-
 	    }               
 }  
 
